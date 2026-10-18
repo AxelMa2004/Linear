@@ -276,12 +276,14 @@ git checkout main
 git pull
 ```
 
+This updates your local copy of `main` with the latest version from GitHub.
+
 ### 2. Create a working branch
 
-Create a separate branch for your changes:
+Create a separate branch for the task you are working on:
 
 ```bash
-git checkout -b your-name-edits
+git checkout -b your-name-task
 ```
 
 For example:
@@ -290,15 +292,27 @@ For example:
 git checkout -b qimin-report-edits
 ```
 
+or:
+
+```bash
+git checkout -b chenyang-final-proofread
+```
+
+A branch can be used across multiple working sessions until that task is complete.
+
 ### 3. Make and review your changes
 
-Check which files have changed:
+Edit the relevant files normally in VS Code.
+
+To check which files have changed:
 
 ```bash
 git status
 ```
 
 ### 4. Commit the changes
+
+When a meaningful set of changes is complete:
 
 ```bash
 git add .
@@ -313,28 +327,53 @@ git commit -m "Revise model diagnostics section"
 
 ### 5. Push the branch
 
+The first time you push a new branch:
+
 ```bash
-git push -u origin your-name-edits
+git push -u origin your-name-task
+```
+
+For later commits on the same branch:
+
+```bash
+git push
 ```
 
 ### 6. Merge through GitHub
 
-Open a pull request on GitHub and merge the branch into `main` after reviewing the changes.
+Open a pull request on GitHub from your branch into `main`.
 
-To minimise merge conflicts, avoid having multiple group members edit the same part of `FN6809_Group 10.tex` simultaneously.
+Review the changes before merging. If there are no conflicts and the changes are correct, the person who created the pull request may merge it directly into `main`.
+
+To minimise merge conflicts, avoid having multiple group members edit the same part of `FN6809_Group 10.tex` at the same time.
+
+### 7. Update your local `main` after merging
+
+After the pull request has been merged:
+
+```bash
+git checkout main
+git pull
+```
+
+This updates your local `main` branch with the newly merged changes.
+
+The old working branch can then be deleted if it is no longer needed.
 
 ---
 
 ## Important Collaboration Notes
 
-- Pull the latest `main` branch before beginning new work.
-- Use separate branches for substantial edits.
+- Always pull the latest `main` branch before starting new work.
+- Use separate branches for meaningful edits rather than working directly on `main`.
+- Group members may merge their own pull requests after checking that there are no conflicts.
+- Avoid editing the same section of `FN6809_Group 10.tex` simultaneously.
 - Do not commit the full raw DB1C dataset.
 - Do not commit temporary LaTeX compilation files.
 - Do not commit Python virtual environments or Conda environments.
 - Do not commit Jupyter checkpoint folders.
-- Keep generated figures and tables that are required by the report in `outputs/`.
-- Keep the latest compiled report PDF so that group members can review the current document without compiling LaTeX themselves.
+- Keep generated figures and tables required by the report in `outputs/`.
+- Keep the latest compiled report PDF so group members can review the current document without compiling LaTeX themselves.
 - Run the notebooks in numerical order when reproducing the full analysis.
 - Do not use the held-out validation sample to make model-specification or refinement decisions.
 
