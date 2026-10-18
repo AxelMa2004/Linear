@@ -1,0 +1,3 @@
+Candidate,Predictors
+Full 8-block model,"TotalDistance, Coupons, RoundTrip, OnLine, PurchaseWindowGroup, RpCarrier_Model, ItinGeoType, OriginState_Model"
+Backward 7-block model,"TotalDistance, RoundTrip, OnLine, PurchaseWindowGroup, RpCarrier_Model, ItinGeoType, OriginState_Model"

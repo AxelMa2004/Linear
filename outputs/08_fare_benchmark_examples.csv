@@ -1,0 +1,4 @@
+Relative_Fare,TotalAmount,Benchmark_Fare,Fare_Gap_Percent,TotalDistance,Coupons,RoundTrip,OnLine,PurchaseWindowGroup,RpCarrier_Model,ItinGeoType,OriginState_Model
+Relatively low,142.99,204.2706782926738,-29.99974289255182,1276.0,2,1,1,2290,MX,2,NC
+Near benchmark,322.4,322.39891925793347,0.00033521888627152663,414.0,1,0,1,21AP,AA,2,PA
+Relatively high,631.8,486.00105071203234,29.99971894594877,3540.0,2,1,1,2290,AS,2,WA
