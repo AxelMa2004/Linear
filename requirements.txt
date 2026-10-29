@@ -6,3 +6,6 @@ matplotlib
 openpyxl
 jupyter
 ipykernel
+seaborn
+pyarrow
+fastparquet
